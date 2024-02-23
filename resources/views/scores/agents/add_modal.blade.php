@@ -101,7 +101,6 @@
                             <td style="font-weight: 400">Weightage</td>
                         </tr>
                         <tr>
-<!--                             <td><input id="actual_remarks"  name="actual_remarks" value="{{$score->actual_remarks}}" type="text"  class="form-control"></td> -->
                             <td><span style="font-weight: bold; "> QUALITY (OVER-ALL) <small>@if($quality) {{$quality->value}} @else {{ 0 }} @endif%</small></span>   </td>
                             <td><input id="actual_quality" required name="actual_quality" value="0" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
                             <td>
@@ -184,7 +183,7 @@
                         </tr>
 
                         <tr>
-                            <td><span style="font-weight: bold;"> PARTNERSHIP <small>@if($people) {{$partnership->value}} @else {{ 0 }} @endif%</small><br>
+                            <td><span style="font-weight: bold;"> PARTNERSHIP <small>@if($partnership) {{$partnership->value}} @else {{ 0 }} @endif%</small><br>
                                     <small> </small></span>   </td>
                             <td><input id="actual_partnership" required name="actual_partnership" value="0" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
                             <td>

@@ -52,7 +52,7 @@
                 <label for="partnership" style="margin-top: 10px;">Partnership</label>
                 <input type="text" class="form-control" name="partnership" id="partnership" autocomplete="off" value="@if($partnership) {{$partnership->value}} @else {{ 0 }} @endif">
                 <label for="priority" style="margin-top: 10px;">Priority</label>
-                <input type="text" class="form-control" name="people" id="priority" autocomplete="off" value="@if($priority) {{$priority->value}} @else {{ 0 }} @endif">
+                <input type="text" class="form-control" name="priority" id="priority" autocomplete="off" value="@if($priority) {{$priority->value}} @else {{ 0 }} @endif">
                 <button type="submit" style="margin-top: 10px;" onclick="return confirm('Are you sure you want to Change Weightage?')" class="btn btn-sm btn-primary pull-right"><i class="fa fa-save"></i> Save</button>
             </div>
         </form>
