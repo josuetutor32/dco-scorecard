@@ -80,11 +80,11 @@ function getAgentScore($agent_id, $month, $period)
         $score_productivity = $agent_score->productivity;
         $score_reliability = getAgentReliabilityScore($agent_score->actual_reliability);
         $score_profit = getAgentProfitScore($agent_score->actual_profit);
-        $score_people = getAgentPeopleScore($agent_score->actual_people);
+        /*$score_people = getAgentPeopleScore($agent_score->actual_people); */
         $score_behavior = getAgentPeopleBehScore($agent_score->actual_behavior);
         $score_engagement = getAgentPeopleEngScore($agent_score->actual_engagement);
-        $score_partnership = getAgentPeopleScore($agent_score->actual_partnership);
-        $score_priority = getAgentPeopleScore($agent_score->actual_priority);
+        $score_partnership = getAgentPartnershipScore($agent_score->actual_partnership);
+        $score_priority = getAgentPriorityScore($agent_score->actual_priority);
         
         $agent_score = $score_quality + $score_productivity + $score_reliability + $score_profit + $score_engagement + $score_behavior + $score_partnership + $score_priority;
 
@@ -291,24 +291,12 @@ function getAgentQualityScore($score)
 
 function getAgentProductivityScore($score)
 {
-    if($score < 80)
+    if($score > 100)
     {
-        $score = 10;
-    }
-    elseif($score >= 80 && $score <= 89)
-    {
-        $score = 15;
-    }
-    elseif($score >= 90 && $score <= 99)
-    {
-        $score = 20;
-    }
-    elseif($score >= 100)
-    {
-        $score = 25;
+        $score = 12.5;
     }
 
-    return $score * 0.125;
+    return (($score * 0.125) / 100) * 100;
 }
 
 function getAgentReliabilityScore($score)
@@ -327,7 +315,7 @@ function getAgentReliabilityScore($score)
     }
     elseif($score >= 90 && $score <= 94)
     {
-        $score = 10;
+        $score = 8;
     }
     elseif($score >= 95)
     {
@@ -339,98 +327,100 @@ function getAgentReliabilityScore($score)
 
 function getAgentProfitScore($score)
 {
-    if($score < 80)
+    if($score  == 0)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 89.99)
+    elseif($score == 5)
     {
         $score = 5;
     }
-    elseif($score >= 90)
+    elseif($score == 10)
     {
         $score = 10;
     }
 
-    return $score;
+    return ($score * 10) / 10;
 }
 
 function getAgentPeopleEngScore($score)
 {
-    if($score < 80)
+    if($score == 0)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 84.99)
-    {
-        $score = 5;
-    }
-    elseif($score >= 85 && $score <= 89.99)
-    {
-        $score = 10;
-    }
-    elseif($score >= 90)
+    elseif($score == 15)
     {
         $score = 15;
     }
 
-    return $score;
+    return ($score * 10) / 10;
 }
 
 function getAgentPeopleBehScore($score)
 {
-    if($score < 80)
+    if($score == 0)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 89.99)
+    elseif($score == 2)
+    {
+        $score = 2;
+    }
+    elseif($score == 5)
     {
         $score = 5;
     }
-    elseif($score >= 90)
+    elseif($score == 8)
+    {
+        $score = 8;
+    }
+    elseif($score == 10)
     {
         $score = 10;
     }
 
-    return $score;
+    return ($score * 10) / 10;
 }
 
 function getAgentPartnershipScore($score)
 {
-    if($score < 80)
+    if($score == 0)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 89.99)
+    elseif($score == 5)
     {
         $score = 5;
     }
-    elseif($score >= 90)
-    {
-        $score = 10;
-    }
 
-    return $score;
-
-    return $score;
+    return ($score * 10) / 10;
 }
 
 function getAgentPriorityScore($score)
 {
-    if($score < 80)
+    if($score == 0)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 89.99)
+    elseif($score == 2)
+    {
+        $score = 2;
+    }
+    elseif($score == 5)
     {
         $score = 5;
     }
-    elseif($score >= 90)
+    elseif($score == 8)
+    {
+        $score = 8;
+    }
+    elseif($score == 10)
     {
         $score = 10;
     }
 
-    return $score;
+    return ($score * 10) / 10;
 
 }
 
@@ -455,6 +445,8 @@ function getTlReliabilityScore($score)
 
     return $score;
 }
+
+
 
 
 /* function getTlReliabilityScore($score)
