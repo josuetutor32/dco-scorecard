@@ -147,34 +147,35 @@ function getAgentQualityScore($score)
     $ranges = [
         '0-79.99' => 0,
         '80-84.99' => 10,
-        '85-89.99' => 20,
-        '90-94.99' => 30,
-        '95-100' => 40,
+        '85-89.99' => 15,
+        '90-94.99' => 20,
+        '95-100' => 25,
     ];
 
-    return getScore($score, $ranges);
+    $rawScore = getScore($score, $ranges); // assuming getScore function exists
+    return round($rawScore);
 }
 
 function getAgentProductivityScore($score)
 {
-    $ranges = [
+/*     $ranges = [
         '0-79.99' => 0,
-        '80-89.99' => 10,
-        '90-99.99' => 20,
-        '100-inf' => 40,
-    ];
+        '80-89.99' => 5,
+        '90-100' => 12.5,
+    ]; */
+    $score *= 0.125;
 
-    return getScore($score, $ranges);
+    return $score;
 }
 
 function getAgentReliabilityScore($score)
 {
     $ranges = [
         '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '80-84.99' => 2,
+        '85-89.99' => 5,
+        '90-94.99' => 8,
+        '95-100' => 12.5,
     ];
 
     return getScore($score, $ranges);
@@ -183,11 +184,9 @@ function getAgentReliabilityScore($score)
 function getAgentProfitScore($score)
 {
     $ranges = [
-        '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '0' => 0,
+        '5' => 5,
+        '10' => 10,
     ];
 
     return getScore($score, $ranges);
@@ -209,11 +208,8 @@ function getAgentPeopleScore($score)
 function getAgentPeopleEngScore($score)
 {
     $ranges = [
-        '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '0' => 0,
+        '15' => 15,
     ];
 
     return getScore($score, $ranges);
@@ -222,11 +218,11 @@ function getAgentPeopleEngScore($score)
 function getAgentPeopleBehScore($score)
 {
     $ranges = [
-        '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '4' => 0,
+        '3' => 2,
+        '2' => 5,
+        '1' => 8,
+        '0' => 10,
     ];
 
     return getScore($score, $ranges);
@@ -235,11 +231,8 @@ function getAgentPeopleBehScore($score)
 function getAgentPartnershipScore($score)
 {
     $ranges = [
-        '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '0' => 0,
+        '5' => 5,
     ];
 
     return getScore($score, $ranges);
@@ -248,11 +241,10 @@ function getAgentPartnershipScore($score)
 function getAgentPriorityScore($score)
 {
     $ranges = [
-        '0-79.99' => 0,
-        '80-84.99' => 5,
-        '85-89.99' => 10,
-        '90-94.99' => 15,
-        '95-100' => 20,
+        '4' => 0,
+        '3' => 2,
+        '2' => 5,
+        '1' => 8,
     ];
 
     return getScore($score, $ranges);
