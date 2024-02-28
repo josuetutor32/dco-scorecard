@@ -128,7 +128,7 @@ function removeBraces($val)
     return $b;
 }
 
- function getScore($score, $ranges)
+/*  function getScore($score, $ranges)
 {
     foreach ($ranges as $range => $value) {
         [$min, $max] = explode('-', $range);
@@ -158,11 +158,11 @@ function getAgentQualityScore($score)
 
 function getAgentProductivityScore($score)
 {
-/*     $ranges = [
+     $ranges = [
         '0-79.99' => 0,
         '80-89.99' => 5,
         '90-100' => 12.5,
-    ]; */
+    ];
     $score *= 0.125;
 
     return $score;
@@ -260,9 +260,10 @@ function getTlReliabilityScore($score)
     ];
 
     return getScore($score, $ranges);
-} 
-/* 
- function getAgentQualityScore($score)
+}  */
+
+
+function getAgentQualityScore($score)
 {
     if($score < 80)
     {
@@ -270,19 +271,19 @@ function getTlReliabilityScore($score)
     }
     elseif($score >= 80 && $score <= 84.99)
     {
-        $score = 10;
+        $score = 5;
     }
     elseif($score >= 85 && $score <= 89.99)
     {
-        $score = 20;
+        $score = 15;
     }
     elseif($score >= 90 && $score <= 94.99)
     {
-        $score = 30;
+        $score = 20;
     }
     elseif($score >= 95)
     {
-        $score = 40;
+        $score = 25;
     }
 
     return $score;
@@ -292,11 +293,11 @@ function getAgentProductivityScore($score)
 {
     if($score < 80)
     {
-        $score = 0;
+        $score = 10;
     }
     elseif($score >= 80 && $score <= 89)
     {
-        $score = 10;
+        $score = 15;
     }
     elseif($score >= 90 && $score <= 99)
     {
@@ -304,10 +305,10 @@ function getAgentProductivityScore($score)
     }
     elseif($score >= 100)
     {
-        $score = 40;
+        $score = 25;
     }
 
-    return $score;
+    return $score * 0.125;
 }
 
 function getAgentReliabilityScore($score)
@@ -318,19 +319,19 @@ function getAgentReliabilityScore($score)
     }
     elseif($score >= 80 && $score <= 84)
     {
-        $score = 5;
+        $score = 2;
     }
     elseif($score >= 85 && $score <= 89)
     {
-        $score = 10;
+        $score = 5;
     }
     elseif($score >= 90 && $score <= 94)
     {
-        $score = 15;
+        $score = 10;
     }
     elseif($score >= 95)
     {
-        $score = 20;
+        $score = 12.5;
     }
 
     return $score;
@@ -342,24 +343,95 @@ function getAgentProfitScore($score)
     {
         $score = 0;
     }
-    elseif($score >= 80 && $score <= 84)
+    elseif($score >= 80 && $score <= 89.99)
     {
         $score = 5;
     }
-    elseif($score >= 85 && $score <= 89)
+    elseif($score >= 90)
     {
         $score = 10;
     }
-    elseif($score >= 90 && $score <= 94)
+
+    return $score;
+}
+
+function getAgentPeopleEngScore($score)
+{
+    if($score < 80)
+    {
+        $score = 0;
+    }
+    elseif($score >= 80 && $score <= 84.99)
+    {
+        $score = 5;
+    }
+    elseif($score >= 85 && $score <= 89.99)
+    {
+        $score = 10;
+    }
+    elseif($score >= 90)
     {
         $score = 15;
     }
-    elseif($score >= 95)
+
+    return $score;
+}
+
+function getAgentPeopleBehScore($score)
+{
+    if($score < 80)
     {
-        $score = 20;
+        $score = 0;
+    }
+    elseif($score >= 80 && $score <= 89.99)
+    {
+        $score = 5;
+    }
+    elseif($score >= 90)
+    {
+        $score = 10;
     }
 
     return $score;
+}
+
+function getAgentPartnershipScore($score)
+{
+    if($score < 80)
+    {
+        $score = 0;
+    }
+    elseif($score >= 80 && $score <= 89.99)
+    {
+        $score = 5;
+    }
+    elseif($score >= 90)
+    {
+        $score = 10;
+    }
+
+    return $score;
+
+    return $score;
+}
+
+function getAgentPriorityScore($score)
+{
+    if($score < 80)
+    {
+        $score = 0;
+    }
+    elseif($score >= 80 && $score <= 89.99)
+    {
+        $score = 5;
+    }
+    elseif($score >= 90)
+    {
+        $score = 10;
+    }
+
+    return $score;
+
 }
 
 function getTlReliabilityScore($score)
@@ -384,4 +456,26 @@ function getTlReliabilityScore($score)
     return $score;
 }
 
- */
+
+/* function getTlReliabilityScore($score)
+{
+    if($score < 85)
+    {
+        $score = 0;
+    }
+    elseif($score >= 85 && $score <= 95)
+    {
+        $score = 5;
+    }
+    elseif($score >= 90 && $score <= 95)
+    {
+        $score = 7;
+    }
+    elseif($score >= 95)
+    {
+        $score = 10;
+    }
+
+    return $score;
+} */
+
