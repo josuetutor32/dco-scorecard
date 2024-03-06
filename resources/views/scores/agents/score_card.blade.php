@@ -384,7 +384,7 @@ dddd
                         <td style="text-align: center; width: 350px;  font-style: italic">
                             <span style="font-weight: 500">10%</span> - No NTE or Coaching Log<br>
                             <span style="font-weight: 500">5%</span> - Coaching Log <br>
-                            <span style="font-weight: 500">5%</span> - NTE <br>
+                            <span style="font-weight: 500">0%</span> - NTE <br>
                         </td>
                         <td class="ttxt-center lbl-bold">10.00%</td>
                         <td>{{$score_behavior_remarks}}</td>
@@ -394,7 +394,7 @@ dddd
                         <td style="text-align: center; width: 350px;  font-style: italic">
                             <span style="font-weight: 500">10%</span> - No NTE or Coaching Log<br>
                             <span style="font-weight: 500">5%</span> - Coaching Log <br>
-                            <span style="font-weight: 500">5%</span> - NTE <br>
+                            <span style="font-weight: 500">0%</span> - NTE <br>
                         </td>
                         <td class="ttxt-center lbl-bold">{{number_format($score->actual_behavior,2)}}%</td>
                         <td class="ttxt-center lbl-bold">{{$score_behavior}}%</td>
@@ -428,7 +428,7 @@ dddd
                         <td class="ttxt-center">Special Projects</td>
                         <td class="ttxt-center">Adhoc assignments like Personiv surveys, etc</td>
                         <td class="ttxt-center">10.00%</td>
-                        <td style="text-align: justify; padding-left: 25px; line-height: 1.5; width: 350px;  font-style: italic">
+                        <td style="text-align: center; width: 350px;  font-style: italic">
                             <span style="font-weight: 500"></span> Rewards hub posting  <br>
                             <span style="font-weight: 500"></span> BCP Kit Testing  <br>
                             <span style="font-weight: 500"></span> Surveys  <br>
@@ -439,7 +439,7 @@ dddd
                         <td></td>
                         <td class="ttxt-center">@if($priority) {{$priority->value}} @else {{ 0 }} @endif%</td>
                         <td></td>
-                        <td style="text-align: justify; padding-left: 25px; line-height: 1.5; width: 350px;  font-style: italic">
+                        <td style="text-align: center; width: 350px;  font-style: italic">
                             <span style="font-weight: 500"></span> Rewards hub posting  <br>
                             <span style="font-weight: 500"></span> BCP Kit Testing  <br>
                             <span style="font-weight: 500"></span> Surveys  <br>
