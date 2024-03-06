@@ -343,8 +343,7 @@
                         <td class="ttxt-center">10.00%</td>
                         <td style="text-align: center;  width: 350px;  font-style: italic">
                             <span style="font-weight: 500">10%</span> - No client escalation<br>
-                            <span style="font-weight: 500">5%</span> - without monetary impact<br>
-                            <span style="font-weight: 500">0%</span> - With monetary impact<br>
+                            <span style="font-weight: 500">0%</span> - With Escalation<br>
                         </td>
                         <td class="ttxt-center lbl-bold">10.00%</td>
                         <td>{{$score_profit_remarks}}</td>
@@ -353,8 +352,7 @@
                         <td></td>
                         <td style="text-align: center;  width: 350px;  font-style: italic">
                             <span style="font-weight: 500">10%</span> - No client escalation<br>
-                            <span style="font-weight: 500">5%</span> - without monetary impact<br>
-                            <span style="font-weight: 500">0%</span> - With monetary impact<br>
+                            <span style="font-weight: 500">0%</span> - With Escalation<br>
                         </td>
                         <!--end 4th column-->
                         <td class="ttxt-center lbl-bold">{{number_format($score->actual_profit,2)}}%</td>
@@ -384,10 +382,9 @@ dddd
                         <td class="ttxt-center">Personal Behavioral Attributes</td>
                         <td class="ttxt-center">10.00%</td>
                         <td style="text-align: center; width: 350px;  font-style: italic">
-                            <span style="font-weight: 500">NTEs</span><br>
-                            <span style="font-weight: 500">Not filing/checking timekeeping</span><br>
-                            <span style="font-weight: 500">TMS Tracker</span><br>
-                            <span style="font-weight: 500">etc</span>
+                            <span style="font-weight: 500">10%</span> - No NTE or Coaching Log<br>
+                            <span style="font-weight: 500">5%</span> - Coaching Log <br>
+                            <span style="font-weight: 500">5%</span> - NTE <br>
                         </td>
                         <td class="ttxt-center lbl-bold">10.00%</td>
                         <td>{{$score_behavior_remarks}}</td>
@@ -395,10 +392,9 @@ dddd
                         <td class="ttxt-center">@if($score_behavior) {{$behavior->value}} @else {{ 0 }} @endif%</td>
                         <td></td>
                         <td style="text-align: center; width: 350px;  font-style: italic">
-                            <span style="font-weight: 500">NTEs</span><br>
-                            <span style="font-weight: 500">Not filing/checking timekeeping</span><br>
-                            <span style="font-weight: 500">TMS Tracker</span><br>
-                            <span style="font-weight: 500">etc</span>
+                            <span style="font-weight: 500">10%</span> - No NTE or Coaching Log<br>
+                            <span style="font-weight: 500">5%</span> - Coaching Log <br>
+                            <span style="font-weight: 500">5%</span> - NTE <br>
                         </td>
                         <td class="ttxt-center lbl-bold">{{number_format($score->actual_behavior,2)}}%</td>
                         <td class="ttxt-center lbl-bold">{{$score_behavior}}%</td>
@@ -410,15 +406,15 @@ dddd
                         <td class="ttxt-center">Client Appreciation</td>
                         <td class="ttxt-center">Client Feedback, mentions, kudos, and commendations</td>
                         <td class="ttxt-center">5.00%</td>
-                        <td style="text-align: justify; padding-left: 25px; line-height: 1.5; width: 350px;  font-style: italic">
+                        <td style="text-align: center; width: 350px;  font-style: italic">
                             <span>All or nothing</span>
                         </td>
                         <td class="ttxt-center lbl-bold">5.00%</td>
-                        <td>{{$score_partnership_remarks}}</td>
+                        <td style="text-align: center; width: 350px;  font-style: italic">{{$score_partnership_remarks}}</td>
                         <td></td>
                         <td class="ttxt-center">@if($partnership) {{$partnership->value}} @else {{ 0 }} @endif%</td>
                         <td></td>
-                        <td style="text-align: justify; padding-left: 25px; line-height: 1.5; width: 350px;  font-style: italic">
+                        <td style="text-align: center; width: 350px;  font-style: italic">
                             <span>All or nothing</span>
                         </td>
                         <td class="ttxt-center lbl-bold">{{number_format($score->actual_partnership,2)}}%</td>

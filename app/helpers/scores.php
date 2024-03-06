@@ -331,10 +331,6 @@ function getAgentProfitScore($score)
     {
         $score = 0;
     }
-    elseif($score == 5)
-    {
-        $score = 5;
-    }
     elseif($score == 10)
     {
         $score = 10;
@@ -363,17 +359,9 @@ function getAgentPeopleBehScore($score)
     {
         $score = 0;
     }
-    elseif($score == 2)
-    {
-        $score = 2;
-    }
     elseif($score == 5)
     {
         $score = 5;
-    }
-    elseif($score == 8)
-    {
-        $score = 8;
     }
     elseif($score == 10)
     {
