@@ -291,7 +291,7 @@ function sumTotalScore() {
         profit = isNaN(profit) ? 0 : profit;
         engagement = isNaN(engagement) ? 0 : engagement;
         behavior = isNaN(behavior) ? 0 : behavior;
-        partnership = isNaN(partnership) ? 0 : partnership;
+        partnership = isNaN(partnership) ? 0 : partnership * 2;
         priority = isNaN(priority) ? 0 : priority;
 
         quality = quality > q ? q : quality;

@@ -227,7 +227,6 @@
       </div>
 @endsection
 
-@section('js')
 <script nonce="{{csp_nonce()}}">
 
 function addModalsumTotalScore() {
@@ -255,7 +254,7 @@ function addModalsumTotalScore() {
         let profit = (pt / 10) * actual_profit;
         let engagement = (e / 10) * actual_engagement;
         let behavior = (b / 10) * actual_behavior;
-        let partnership = (ps / 10) * actual_partnership;
+        let partnership = (ps / 10) * actual_partnership * 2;
         let priority = (py / 10) * actual_priority;
 
         quality = isNaN(quality) ? 0 : quality;
@@ -301,5 +300,4 @@ function addModalsumTotalScore() {
     }
 
 </script>
-@endsection
 
