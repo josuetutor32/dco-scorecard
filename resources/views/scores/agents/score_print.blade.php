@@ -306,13 +306,13 @@
                             <td class="ttxt-center">Engagement Participation</td>
                             <td class="ttxt-center">Client, Tower and Personiv Engagement Attendance</td>
                             <td class="ttxt-center">15.00%</td>
-                            <td style="text-align: center; width: 350px;  font-style: italic">100% Compliance</td>
+                            <td style="text-align: center; width: 350px;  font-style: italic">Attended at least 1 Personiv or DCO engagement activities.</td>
                             <td class="ttxt-center lbl-bold">15.00%</td>
                             <td>{{$score_engagement_remarks}}</td>
                             <td></td>
                             <td class="ttxt-center">15%</td>
                             <td></td>
-                            <td style="text-align: center; width: 350px;  font-style: italic">100% Compliance</td>
+                            <td style="text-align: center; width: 350px;  font-style: italic">Attended at least 1 Personiv or DCO engagement activities.</td>
                             <td class="ttxt-center lbl-bold">{{number_format($score->actual_engagement,2)}}%</td>
                             <td class="ttxt-center lbl-bold">{{$score_engagement}}%</td>
                         </tr>

@@ -106,6 +106,8 @@ class ScoresImport implements ToModel, WithHeadingRow, WithValidation,SkipsEmpty
                     'actual_profit' => $actual_profit,
                     'actual_engagement' => $actual_engagement,
                     'actual_behavior' => $actual_behavior,
+                    'actual_partnership' => $actual_partnership,
+                    'actual_priority' => $actual_priority,
 
                     'productivity' => $productivity,
                     'quality' => $quality,

@@ -376,7 +376,6 @@
                         <td class="ttxt-center lbl-bold">{{$score_engagement}}%</td>
                         <!--end 5th column-->
                     </tr>
-dddd
                     <tr>
                         <td class="ttxt-center">Behavioral Attributes</td>
                         <td class="ttxt-center">Personal Behavioral Attributes</td>
