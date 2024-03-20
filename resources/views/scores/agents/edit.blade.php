@@ -113,7 +113,7 @@ $dt1 = carbon::now();
                                 <td>Weightage</td>
                         </tr>
                         <tr>
-                            <td><input id="quality_remarks" required name="quality_remarks" value="{{$score->quality_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="quality_remarks" name="quality_remarks" value="{{$score->quality_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> QUALITY (OVER-ALL) <small>@if($quality) {{$quality->value}} @else {{ 0 }} @endif%</small></span>   </td>
                             <td><input id="actual_quality" required name="actual_quality" value="{{$score->actual_quality}}" type="text" class="form-control" placeholder="" onkeyup="sumTotalScore()"></td>
                             <td>
@@ -127,7 +127,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="productivity_remarks" required name="productivity_remarks" value="{{$score->productivity_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="productivity_remarks" name="productivity_remarks" value="{{$score->productivity_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> PRODUCTIVITY <small>@if($productivity) {{$productivity->value}} @else {{ 0 }} @endif%</small></span>   </td>
                             <td><input id="actual_productivity" required name="actual_productivity" value="{{$score->actual_productivity}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
                             <td>
@@ -142,7 +142,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="reliability_remarks" required name="reliability_remarks" value="{{$score->reliability_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="reliability_remarks" name="reliability_remarks" value="{{$score->reliability_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> RELIABILITY <small>@if($reliability) {{$reliability->value}} @else {{ 0 }} @endif%</small><br>
                                     <small> (Absenteeism, Tardiness, Overbreak, Undertime)</small></span>   </td>
                             <td><input id="actual_reliability" required name="actual_reliability" value="{{$score->actual_reliability}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
@@ -158,7 +158,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="profit_remarks" required name="profit_remarks" value="{{$score->profit_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="profit_remarks" name="profit_remarks" value="{{$score->profit_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> PROFIT <small>@if($profit) {{$profit->value}} @else {{ 0 }} @endif%</small><br>
                                     <small></small></span>   </td>
                             <td><input id="actual_profit" required name="actual_profit" value="{{$score->actual_profit}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
@@ -174,7 +174,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="engagement_remarks" required name="engagement_remarks" value="{{$score->engagement_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="engagement_remarks" name="engagement_remarks" value="{{$score->engagement_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> ENGAGEMENT <small>@if($engagement) {{$engagement->value}} @else {{ 0 }} @endif%</small><br>
                                     <small></small></span>   </td>
                             <td><input id="actual_engagement" required name="actual_engagement" value="{{$score->actual_engagement}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
@@ -190,7 +190,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="behavior_remarks" required name="behavior_remarks" value="{{$score->behavior_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="behavior_remarks" name="behavior_remarks" value="{{$score->behavior_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> BEHAVIOR <small>@if($behavior) {{$behavior->value}} @else {{ 0 }} @endif%</small><br>
                                     <small></small></span>   </td>
                             <td><input id="actual_behavior" required name="actual_behavior" value="{{$score->actual_behavior}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
@@ -206,7 +206,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="partnership_remarks" required name="partnership_remarks" value="{{$score->partnership_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="partnership_remarks" name="partnership_remarks" value="{{$score->partnership_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> PARTNERSHIP <small>@if($partnership) {{$partnership->value}} @else {{ 0 }} @endif%</small><br>
                                     <small></small></span>   </td>
                             <td><input id="actual_partnership" required name="actual_partnership" value="{{$score->actual_partnership}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
@@ -222,7 +222,7 @@ $dt1 = carbon::now();
                         </tr>
 
                         <tr>
-                            <td><input id="priority_remarks" required name="priority_remarks" value="{{$score->priority_remarks}}" type="text"  class="form-control"></td>
+                            <td><input id="priority_remarks" name="priority_remarks" value="{{$score->priority_remarks}}" type="text"  class="form-control"></td>
                             <td><span style="font-weight: bold"> PRIORITY <small>@if($priority) {{$priority->value}} @else {{ 0 }} @endif%</small><br>
                                     <small></small></span>   </td>
                             <td><input id="actual_priority" required name="actual_priority" value="{{$score->actual_priority}}" type="text" class="form-control" placeholder="%" onkeyup="sumTotalScore()"></td>
